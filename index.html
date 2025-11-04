@@ -99,9 +99,9 @@
                 
                     <div class="module-card open-modal-btn" 
                          data-title="Módulo 4: Estruturas de Repetição"
-                         data-video="#" 
-                         data-pdf-presentation="pdfs/Estruturas-de-Repeticao.pdf"
-                         data-pdf-list1="#"
+                         data-video="videos/videoEstruturasDeRepeticao.mp4" 
+                         data-pdf-presentation="pdfs/Apresentacao-Estruturas-de-Repeticao.pdf"
+                         data-pdf-list1="pdfs/lista-4-Estruturas-de-Repeticao.pdf" 
                          data-pdf-list2="#"
                          data-pdf-list3="#"> 
                 
@@ -114,7 +114,7 @@
                          data-title="Módulo 5: Vetores (Arrays)"
                          data-video="videos/vetores.mp4" 
                          data-pdf-presentation="pdfs/Vetores.pdf"
-                         data-pdf-list1="#"
+                         data-pdf-list1="pdfs/lista-5-Vetores.pdf" 
                          data-pdf-list2="#"
                          data-pdf-list3="#"> 
                 
@@ -127,7 +127,7 @@
                          data-title="Módulo 6: Matrizes"
                          data-video="#" 
                          data-pdf-presentation="#" 
-                         data-pdf-list1="#"
+                         data-pdf-list1="pdfs/lista-6-Matrizes.pdf" 
                          data-pdf-list2="#"
                          data-pdf-list3="#"> 
                 
@@ -138,9 +138,8 @@
                 
                     <div class="module-card open-modal-btn" 
                          data-title="Módulo 7: Strings"
-                         data-video="#" 
-                         data-pdf-presentation="#" 
-                         data-pdf-list1="#"
+                         data-video="videos/videoStrings.mp4" 
+                         data-pdf-presentation="pdfs/ApresentacaoStrings.pdf" data-pdf-list1="pdfs/lista-7-Strings.pdf" 
                          data-pdf-list2="#"
                          data-pdf-list3="#"> 
                 
@@ -151,9 +150,9 @@
                 
                     <div class="module-card open-modal-btn" 
                          data-title="Módulo 8: Funções"
-                         data-video="#" 
-                         data-pdf-presentation="#" 
-                         data-pdf-list1="#"
+                         data-video="videos/videoFuncoes.mp4" 
+                         data-pdf-presentation="pdfs/Apresentacao-Funcoes.pdf" 
+                         data-pdf-list1="pdfs/lista-8-Funcoes.pdf" 
                          data-pdf-list2="#"
                          data-pdf-list3="#"> 
                 
@@ -197,7 +196,7 @@
                     </div>
                     
                     <div class="team-card">
-                        <img src="https://github.com/anabeatrizbarretot.png" alt="Foto de Ana Beatriz Barreto">
+                        <img src="httpsD://github.com/anabeatrizbarretot.png" alt="Foto de Ana Beatriz Barreto">
                         <h3>Ana Beatriz Barreto</h3>
                         <div class="social-links">
                             <a href="https://github.com/anabeatrizbarretot" target="_blank"><i class="fab fa-github"></i></a>
@@ -373,7 +372,7 @@
             }
 
             // ==============================================
-            // LÓGICA DE COPIAR E-MAIL (ADICIONADA)
+            // LÓGICA DE COPIAR E-MAIL
             // ==============================================
             const copyBtn = document.getElementById('copy-email-btn');
             const copySuccessMsg = document.getElementById('copy-success-msg');
@@ -381,25 +380,20 @@
 
             if (copyBtn) {
                 copyBtn.addEventListener('click', () => {
-                    // Tenta copiar o e-mail
                     navigator.clipboard.writeText(emailToCopy).then(() => {
-                        // Sucesso!
                         copySuccessMsg.classList.add('visible');
                         copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
                         
-                        // Reseta o botão e a mensagem depois de 3 segundos
                         setTimeout(() => {
                             copySuccessMsg.classList.remove('visible');
                             copyBtn.innerHTML = '<i class="fa-solid fa-copy"></i> felipeestevesdepaula@gmail.com';
                         }, 3000);
                         
                     }).catch(err => {
-                        // Erro (raro, mas pode acontecer)
                         console.error('Falha ao copiar e-mail: ', err);
                         copySuccessMsg.textContent = 'Erro ao copiar. Use Ctrl+C.';
                         copySuccessMsg.classList.add('visible');
                         
-                        // Reseta em caso de erro
                         setTimeout(() => {
                             copySuccessMsg.classList.remove('visible');
                             copySuccessMsg.textContent = 'E-mail copiado para a área de transferência!';
@@ -407,9 +401,6 @@
                     });
                 });
             }
-            // ==============================================
-            // FIM DA LÓGICA DE COPIAR E-MAIL
-    
 
         });
     </script>
