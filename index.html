@@ -7,6 +7,39 @@
     <meta name="description" content="Curso Universo C: vídeos e exercícios em PDF para aprender C.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        .pdf-viewer {
+            width: 100%; /* Ocupa a largura total do container */
+            height: 50vh; /* Define uma altura razoável */
+            border: 1px solid #ccc;
+            display: none; /* Inicia oculto e é exibido pelo JS */
+        }
+        .modal-recursos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        /* Estilo para o botão GDB dentro da modal */
+        .gdb-btn-modal {
+            display: none; /* Oculta por padrão */
+            padding: 10px 15px;
+            background-color: #3f51b5; /* Cor de destaque para o GDB */
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            justify-content: center; /* Centraliza ícone e texto */
+            align-items: center;
+        }
+
+        .gdb-btn-modal:hover {
+            background-color: #303f9f;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,8 +53,7 @@
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#modulos">Módulos</a></li>
                     <li><a href="#time">Time</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
+                    </ul>
             </nav>
         </div>
     </header>
@@ -59,12 +91,12 @@
                 <div class="modules-grid">
     
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 1: Fundamentos da Linguagem"
-                         data-video="videos/Apresentacao.mp4"
-                         data-pdf-presentation="pdfs/Apresentacao-Universo-C.pdf"
-                         data-pdf-list1="#"
-                         data-pdf-list2="#"
-                         data-pdf-list3="#">
+                        data-title="Módulo 1: Fundamentos da Linguagem"
+                        data-video="videos/Apresentacao.mp4"
+                        data-pdf-presentation="pdfs/Apresentacao-Universo-C.pdf"
+                        data-pdf-list1="#"
+                        data-pdf-list2="#"
+                        data-pdf-list3="#">
                 
                         <div class="card-icon"><i class="fa-solid fa-code"></i></div>
                         <h3>Módulo 1: Fundamentos da Linguagem</h3>
@@ -72,25 +104,25 @@
                     </div>
                 
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 2: Introdução e Ambiente"
-                         data-video="videos/ide.mp4"
-                         data-pdf-presentation="#"
-                         data-pdf-list1="#"
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
+                        data-title="Módulo 2: Introdução e Ambiente"
+                        data-video="videos/ide.mp4"
+                        data-pdf-presentation="#"
+                        data-pdf-list1="#"
+                        data-pdf-list2="#"
+                        data-pdf-list3="#"
+                        data-module-id="mod2"> 
                 
                         <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
                         <h3>Módulo 2: Introdução e Ambiente</h3>
                         <p>Conceitos iniciais, configuração do ambiente (IDE) e o primeiro "Olá, Mundo!".</p>
                     </div>
-                
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 3: Estruturas Condicionais"
-                         data-video="videos/EstruturasCondicionais.mp4"
-                         data-pdf-presentation="pdfs/Estruturas-Condicionais.pdf"
-                         data-pdf-list1="pdfs/LISTA-1-Estrutura-Sequencial.pdf"
-                         data-pdf-list2="pdfs/Lista-2-Estruturas-Condicionais.pdf"
-                         data-pdf-list3="pdfs/Lista-3-Estrutura-Condicional-Multipla.pdf">
+                        data-title="Módulo 3: Estruturas Condicionais"
+                        data-video="videos/EstruturasCondicionais.mp4"
+                        data-pdf-presentation="pdfs/Estruturas-Condicionais.pdf"
+                        data-pdf-list1="pdfs/LISTA-1-Estrutura-Sequencial.pdf"
+                        data-pdf-list2="pdfs/Lista-2-Estruturas-Condicionais.pdf"
+                        data-pdf-list3="pdfs/Lista-3-Estrutura-Condicional-Multipla.pdf">
                 
                         <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
                         <h3>Módulo 3: Estruturas Condicionais</h3>
@@ -98,12 +130,12 @@
                     </div>
                 
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 4: Estruturas de Repetição"
-                         data-video="videos/videoEstruturasDeRepeticao.mp4" 
-                         data-pdf-presentation="pdfs/Apresentacao-Estruturas-de-Repeticao.pdf"
-                         data-pdf-list1="pdfs/lista-4-Estruturas-de-Repeticao.pdf"
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
+                        data-title="Módulo 4: Estruturas de Repetição"
+                        data-video="videos/videoEstruturasDeRepeticao.mp4" 
+                        data-pdf-presentation="pdfs/Apresentacao-Estruturas-de-Repeticao.pdf"
+                        data-pdf-list1="pdfs/lista-4-Estruturas-de-Repeticao.pdf"
+                        data-pdf-list2="#"
+                        data-pdf-list3="#"> 
                 
                         <div class="card-icon"><i class="fa-solid fa-repeat"></i></div>
                         <h3>Módulo 4: Estruturas de Repetição</h3>
@@ -111,12 +143,12 @@
                     </div>
                 
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 5: Vetores (Arrays)"
-                         data-video="videos/vetores.mp4" 
-                         data-pdf-presentation="pdfs/Vetores.pdf"
-                         data-pdf-list1="pdfs/lista-5-Vetores.pdf"
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
+                        data-title="Módulo 5: Vetores (Arrays)"
+                        data-video="videos/vetores.mp4" 
+                        data-pdf-presentation="pdfs/Vetores.pdf"
+                        data-pdf-list1="pdfs/lista-5-Vetores.pdf"
+                        data-pdf-list2="#"
+                        data-pdf-list3="#"> 
                 
                         <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
                         <h3>Módulo 5: Vetores (Arrays)</h3>
@@ -124,12 +156,12 @@
                     </div>
                 
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 6: Matrizes"
-                         data-video="videos/Matrizes.mp4" 
-                         data-pdf-presentation="pdfs/apresentacaoMatrizes.pdf" 
-                         data-pdf-list1="pdfs/lista-6-Matrizes.pdf"
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
+                        data-title="Módulo 6: Matrizes"
+                        data-video="videos/Matrizes.mp4" 
+                        data-pdf-presentation="pdfs/apresentacaoMatrizes.pdf" 
+                        data-pdf-list1="pdfs/lista-6-Matrizes.pdf"
+                        data-pdf-list2="#"
+                        data-pdf-list3="#"> 
                 
                         <div class="card-icon"><i class="fa-solid fa-table-cells"></i></div>
                         <h3>Módulo 6: Matrizes</h3>
@@ -137,12 +169,12 @@
                     </div>
                 
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 7: Strings"
-                         data-video="videos/videoStrings.mp4" 
-                         data-pdf-presentation="pdfs/ApresentacaoStrings.pdf"
-                         data-pdf-list1="pdfs/lista-7-Strings.pdf" 
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
+                        data-title="Módulo 7: Strings"
+                        data-video="videos/videoStrings.mp4" 
+                        data-pdf-presentation="pdfs/ApresentacaoStrings.pdf"
+                        data-pdf-list1="pdfs/lista-7-Strings.pdf" 
+                        data-pdf-list2="#"
+                        data-pdf-list3="#"> 
                 
                         <div class="card-icon"><i class="fa-solid fa-font"></i></div>
                         <h3>Módulo 7: Strings</h3>
@@ -150,12 +182,12 @@
                     </div>
                 
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 8: Funções"
-                         data-video="videos/videoFuncoes.mp4" 
-                         data-pdf-presentation="pdfs/Apresentacao-Funcoes.pdf"
-                         data-pdf-list1="pdfs/lista-8-Funcoes.pdf" 
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
+                        data-title="Módulo 8: Funções"
+                        data-video="videos/videoFuncoes.mp4" 
+                        data-pdf-presentation="pdfs/Apresentacao-Funcoes.pdf"
+                        data-pdf-list1="pdfs/lista-8-Funcoes.pdf" 
+                        data-pdf-list2="#"
+                        data-pdf-list3="#"> 
                 
                         <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
                         <h3>Módulo 8: Funções</h3>
@@ -163,19 +195,19 @@
                     </div>
 
                     <div class="module-card open-modal-btn" 
-                         data-title="Módulo 9: Conclusão"
-                         data-video="videos/agradecimento.mp4" 
-                         data-pdf-presentation="#"
-                         data-pdf-list1="#"
-                         data-pdf-list2="#"
-                         data-pdf-list3="#"> 
+                        data-title="Módulo 9: Conclusão"
+                        data-video="videos/agradecimento.mp4" 
+                        data-pdf-presentation="#"
+                        data-pdf-list1="#"
+                        data-pdf-list2="#"
+                        data-pdf-list3="#"> 
                         <div class="card-icon"><i class="fa-solid fa-star"></i></div>
                         <h3>Módulo 9: Conclusão</h3>
                         <p>Parabéns por completar a jornada! Esperamos que esta base sólida impulsione seus futuros projetos.</p>
                     </div>
-                    </div>
-                
                 </div>
+                
+            </div>
         </section>
 
         <section id="time" class="section">
@@ -223,22 +255,6 @@
             </div>
         </section>
 
-        <section id="contato" class="section alt">
-             <div class="container contact-content">
-                <h2>Fale Conosco</h2>
-                <p>Dúvidas ou sugestões? Clique no botão abaixo para copiar nosso e-mail.</p>
-                
-                <button id="copy-email-btn" class="btn">
-                    <i class="fa-solid fa-copy"></i> felipeestevesdepaula@gmail.com
-                </button>
-                
-                <p id="copy-success-msg" class="copy-success">
-                    E-mail copiado para a área de transferência!
-                </p>
-
-            </div>
-        </section>
-
     </main>
 
     <footer class="footer">
@@ -260,20 +276,32 @@
                 </video>
             </div>
             
-            <div class="modal-links">
-                <a id="modal-pdf-presentation" href="#" target="_blank" class="btn-recurso">
-                    <i class="fa-solid fa-file-pdf"></i> Ver Apresentação
+            <div class="modal-recursos-container"> 
+                
+                <a id="modal-gdb-link" href="https://www.onlinegdb.com/online_c_compiler" target="_blank" class="btn-recurso gdb-btn-modal">
+                    <i class="fa-solid fa-terminal"></i> Abrir Online GDB
                 </a>
-                <a id="modal-pdf-list1" href="#" target="_blank" class="btn-recurso">
-                    <i class="fa-solid fa-list-check"></i> Lista 1
-                </a>
-                <a id="modal-pdf-list2" href="#" target="_blank" class="btn-recurso">
-                    <i class="fa-solid fa-list-check"></i> Lista 2
-                </a>
-                <a id="modal-pdf-list3" href="#" target="_blank" class="btn-recurso">
-                    <i class="fa-solid fa-list-check"></i> Lista 3
-                </a>
+
+                <object id="pdf-viewer" data="" type="application/pdf" class="pdf-viewer">
+                    <p>Seu navegador não consegue exibir o PDF. Use os links abaixo para baixar.</p>
+                </object>
+                
+                <div class="modal-links">
+                    <a id="modal-pdf-presentation" href="#" target="_blank" class="btn-recurso" download>
+                        <i class="fa-solid fa-download"></i> Baixar Apresentação
+                    </a>
+                    <a id="modal-pdf-list1" href="#" target="_blank" class="btn-recurso" download>
+                        <i class="fa-solid fa-download"></i> Baixar Lista 1
+                    </a>
+                    <a id="modal-pdf-list2" href="#" target="_blank" class="btn-recurso" download>
+                        <i class="fa-solid fa-download"></i> Baixar Lista 2
+                    </a>
+                    <a id="modal-pdf-list3" href="#" target="_blank" class="btn-recurso" download>
+                        <i class="fa-solid fa-download"></i> Baixar Lista 3
+                    </a>
+                </div>
             </div>
+
         </div>
     </div>
     
@@ -289,20 +317,24 @@
         });
 
         // ==============================================
-        // LÓGICA DO MODAL
+        // LÓGICA DO MODAL (ATUALIZADA)
         // ==============================================
         document.addEventListener('DOMContentLoaded', () => {
 
-            // --- Lógica do Modal ---
+            // --- Referências do Modal ---
             const modalTriggers = document.querySelectorAll('.open-modal-btn');
             const modalOverlay = document.getElementById('modal-overlay');
             const modalCloseBtn = document.getElementById('modal-close');
             const modalTitle = document.getElementById('modal-title');
             const modalVideo = document.getElementById('modal-video');
+            
+            const pdfViewer = document.getElementById('pdf-viewer');
             const modalPdfPresentation = document.getElementById('modal-pdf-presentation');
             const modalPdfList1 = document.getElementById('modal-pdf-list1');
             const modalPdfList2 = document.getElementById('modal-pdf-list2');
             const modalPdfList3 = document.getElementById('modal-pdf-list3');
+            
+            const modalGdbLink = document.getElementById('modal-gdb-link'); 
 
             const openModal = (e) => {
                 const triggerCard = e.currentTarget;
@@ -312,9 +344,13 @@
                 const pdfList1Src = triggerCard.dataset.pdfList1;
                 const pdfList2Src = triggerCard.dataset.pdfList2;
                 const pdfList3Src = triggerCard.dataset.pdfList3;
+                const moduleId = triggerCard.dataset.moduleId; 
+                
+                let firstPdfSrc = "#"; 
 
                 modalTitle.textContent = title;
                 
+                // 1. Configuração do Vídeo
                 if (videoSrc && videoSrc !== "#") {
                     modalVideo.querySelector('source').src = videoSrc;
                     modalVideo.load();
@@ -323,42 +359,78 @@
                     modalVideo.parentElement.style.display = 'none';
                 }
                 
+                // 2. Configuração dos PDFs
+                
+                // --- Apresentação (Visualização e Download) ---
                 if (pdfPresentationSrc && pdfPresentationSrc !== "#") {
                     modalPdfPresentation.href = pdfPresentationSrc;
                     modalPdfPresentation.style.display = 'inline-flex';
+                    if (firstPdfSrc === "#") firstPdfSrc = pdfPresentationSrc;
                 } else {
                     modalPdfPresentation.style.display = 'none';
                 }
 
+                // --- Lista 1 (Download) ---
                 if (pdfList1Src && pdfList1Src !== "#") {
                     modalPdfList1.href = pdfList1Src;
                     modalPdfList1.style.display = 'inline-flex';
+                    if (firstPdfSrc === "#") firstPdfSrc = pdfList1Src;
                 } else {
                     modalPdfList1.style.display = 'none';
                 }
                 
+                // --- Lista 2 (Download) ---
                 if (pdfList2Src && pdfList2Src !== "#") {
                     modalPdfList2.href = pdfList2Src;
                     modalPdfList2.style.display = 'inline-flex';
+                    if (firstPdfSrc === "#") firstPdfSrc = pdfList2Src;
                 } else {
                     modalPdfList2.style.display = 'none';
                 }
                 
+                // --- Lista 3 (Download) ---
                 if (pdfList3Src && pdfList3Src !== "#") {
                     modalPdfList3.href = pdfList3Src;
                     modalPdfList3.style.display = 'inline-flex';
+                    if (firstPdfSrc === "#") firstPdfSrc = pdfList3Src;
                 } else {
                     modalPdfList3.style.display = 'none';
                 }
+
+                // 3. Exibir Visualizador de PDF com o primeiro PDF encontrado
+                if (firstPdfSrc !== "#") {
+                    pdfViewer.data = firstPdfSrc; // Carrega o PDF para visualização
+                    pdfViewer.style.display = 'block';
+                } else {
+                    pdfViewer.data = ""; // Limpa o visualizador
+                    pdfViewer.style.display = 'none';
+                }
                 
+                // 4. Lógica do Botão Online GDB
+                // O botão GDB é exibido apenas para o Módulo 2 (com data-module-id="mod2")
+                if (moduleId === "mod2") {
+                    modalGdbLink.style.display = 'inline-flex';
+                } else {
+                    modalGdbLink.style.display = 'none';
+                }
+
+                // Abre a modal
                 modalOverlay.classList.add('active');
             };
 
             const closeModal = () => {
                 modalOverlay.classList.remove('active');
+                
+                // Pausa e reseta o vídeo
                 modalVideo.pause();
                 modalVideo.currentTime = 0;
                 modalVideo.querySelector('source').src = "";
+                
+                // Limpa o visualizador de PDF para liberar memória
+                pdfViewer.data = "";
+                
+                // Oculta o botão GDB ao fechar
+                modalGdbLink.style.display = 'none';
             };
 
             modalTriggers.forEach(trigger => {
@@ -376,38 +448,6 @@
                     }
                 });
             }
-
-            // ==============================================
-            // LÓGICA DE COPIAR E-MAIL
-            // ==============================================
-            const copyBtn = document.getElementById('copy-email-btn');
-            const copySuccessMsg = document.getElementById('copy-success-msg');
-            const emailToCopy = 'felipeestevesdepaula@gmail.com';
-
-            if (copyBtn) {
-                copyBtn.addEventListener('click', () => {
-                    navigator.clipboard.writeText(emailToCopy).then(() => {
-                        copySuccessMsg.classList.add('visible');
-                        copyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
-                        
-                        setTimeout(() => {
-                            copySuccessMsg.classList.remove('visible');
-                            copyBtn.innerHTML = '<i class="fa-solid fa-copy"></i> felipeestevesdepaula@gmail.com';
-                        }, 3000);
-                        
-                    }).catch(err => {
-                        console.error('Falha ao copiar e-mail: ', err);
-                        copySuccessMsg.textContent = 'Erro ao copiar. Use Ctrl+C.';
-                        copySuccessMsg.classList.add('visible');
-                        
-                        setTimeout(() => {
-                            copySuccessMsg.classList.remove('visible');
-                            copySuccessMsg.textContent = 'E-mail copiado para a área de transferência!';
-                        }, 5000);
-                    });
-                });
-            }
-
         });
     </script>
 
