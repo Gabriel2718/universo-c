@@ -21,24 +21,6 @@
             gap: 15px;
             margin-top: 20px;
         }
-        /* Estilo para o botão GDB dentro da modal */
-        .gdb-btn-modal {
-            display: none; /* Oculta por padrão */
-            padding: 10px 15px;
-            background-color: #3f51b5; /* Cor de destaque para o GDB */
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            justify-content: center; /* Centraliza ícone e texto */
-            align-items: center;
-        }
-
-        .gdb-btn-modal:hover {
-            background-color: #303f9f;
-        }
     </style>
 </head>
 <body>
@@ -278,15 +260,14 @@
             
             <div class="modal-recursos-container"> 
                 
-                <a id="modal-gdb-link" href="https://www.onlinegdb.com/online_c_compiler" target="_blank" class="btn-recurso gdb-btn-modal">
-                    <i class="fa-solid fa-terminal"></i> Abrir Online GDB
-                </a>
-
                 <object id="pdf-viewer" data="" type="application/pdf" class="pdf-viewer">
                     <p>Seu navegador não consegue exibir o PDF. Use os links abaixo para baixar.</p>
                 </object>
                 
                 <div class="modal-links">
+                    <a id="modal-gdb-link" href="https://www.onlinegdb.com/online_c_compiler" target="_blank" class="btn-recurso gdb-btn-modal" style="display: none;">
+                        <i class="fa-solid fa-terminal"></i> Abrir Online GDB
+                    </a>
                     <a id="modal-pdf-presentation" href="#" target="_blank" class="btn-recurso" download>
                         <i class="fa-solid fa-download"></i> Baixar Apresentação
                     </a>
